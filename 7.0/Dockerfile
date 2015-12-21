@@ -24,10 +24,12 @@ RUN apt-add-repository ppa:ondrej/php-7.0 -y \
        nodejs \
        php7.0-cli \
        php7.0-dev \
+       php7.0-readline \
        php-curl \
        php-gd \
        php-imap \
        php-intl \
+       php-memcached \
        php-mysql \
        php-pgsql \
        php-sqlite3 \
