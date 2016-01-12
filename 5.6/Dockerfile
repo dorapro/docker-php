@@ -10,19 +10,11 @@ ENV LC_ALL en_US.UTF-8
 RUN ln -fs /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 
 RUN apt-get update -q && apt-get upgrade -yq --force-yes
-RUN apt-get install -yq --force-yes --no-install-recommends software-properties-common curl \
-    && apt-add-repository ppa:git-core/ppa -y \
-    && apt-get install git -yq --force-yes --no-install-recommends \
-    && apt-get autoremove -qq \
-    && apt-get clean -qq \
-    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* >/dev/null 2>&1
-
-RUN apt-add-repository ppa:ondrej/php5-5.6 -y \
-    && curl --silent --location https://deb.nodesource.com/setup_5.x | bash - \
+RUN apt-get install -yq --force-yes --no-install-recommends software-properties-common \
+    && apt-add-repository ppa:ondrej/php5-5.6 -y \
+    && apt-get update \
     && apt-get install -yq --force-yes --no-install-recommends \
        build-essential \
-       openssh-client \
-       nodejs \
        php5-apcu \
        php5-cli \
        php5-curl \
@@ -40,10 +32,6 @@ RUN apt-add-repository ppa:ondrej/php5-5.6 -y \
        php-pear \
     && apt-get autoremove -qq \
     && apt-get clean -qq \
-    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* >/dev/null 2>&1 \
-    && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
-    && composer self-update 1.0.0-alpha11 \
-    && /usr/bin/npm install -gq gulp \
-    && /usr/bin/npm install -gq bower
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* >/dev/null 2>&1
 
 CMD ["php", "-a"]
