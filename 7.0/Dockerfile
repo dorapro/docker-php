@@ -15,6 +15,7 @@ RUN apt-get install -yq --force-yes --no-install-recommends software-properties-
     && apt-get update \
     && apt-get install -yq --force-yes --no-install-recommends \
        build-essential \
+       curl \
        php7.0-cli \
        php7.0-dev \
        php7.0-readline \

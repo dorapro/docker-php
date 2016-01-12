@@ -15,6 +15,7 @@ RUN apt-get install -yq --force-yes --no-install-recommends software-properties-
     && apt-get update \
     && apt-get install -yq --force-yes --no-install-recommends \
        build-essential \
+       curl \
        php5-apcu \
        php5-cli \
        php5-curl \
