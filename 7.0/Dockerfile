@@ -21,6 +21,7 @@ RUN apt-add-repository ppa:ondrej/php-7.0 -y \
     && curl --silent --location https://deb.nodesource.com/setup_5.x | bash - \
     && apt-get install -yq --force-yes --no-install-recommends \
        build-essential \
+       openssh-client \
        nodejs \
        php7.0-cli \
        php7.0-dev \

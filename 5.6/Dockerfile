@@ -21,6 +21,7 @@ RUN apt-add-repository ppa:ondrej/php5-5.6 -y \
     && curl --silent --location https://deb.nodesource.com/setup_5.x | bash - \
     && apt-get install -yq --force-yes --no-install-recommends \
        build-essential \
+       openssh-client \
        nodejs \
        php5-apcu \
        php5-cli \
