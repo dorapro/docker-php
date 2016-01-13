@@ -45,6 +45,7 @@ RUN apt-get update -q && apt-add-repository ppa:git-core/ppa -y \
     && apt-get autoremove -qq \
     && apt-get clean -qq \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* >/dev/null 2>&1 \
+    && mkdir -p ~/.ssh \
     && ssh-keyscan -H github.com >> ~/.ssh/known_hosts \
     && ssh-keyscan -H bitbucket.org >> ~/.ssh/known_hosts \
     && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
