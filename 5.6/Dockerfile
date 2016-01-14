@@ -1,6 +1,6 @@
 FROM dorapro/ubuntu:14.04
 
-RUN apt-get install -yq --force-yes --no-install-recommends software-properties-common \
+RUN apt-get update -q && apt-get install -yq --force-yes --no-install-recommends software-properties-common \
     && apt-add-repository ppa:ondrej/php5-5.6 -y \
     && apt-get update \
     && apt-get install -yq --force-yes --no-install-recommends \
