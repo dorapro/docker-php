@@ -37,6 +37,7 @@ RUN apt-get update -q && apt-add-repository ppa:git-core/ppa -y \
     && ssh-keyscan -H bitbucket.org >> ~/.ssh/known_hosts \
     && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
     && composer self-update 1.0.0-alpha11 \
+    && composer global require hirak/prestissimo \
     && curl -sS http://get.sensiolabs.org/php-cs-fixer.phar -o /usr/local/bin/php-cs-fixer \
     && chmod a+x /usr/local/bin/php-cs-fixer \
     && curl -sS https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar -o /usr/local/bin/phpcs \
