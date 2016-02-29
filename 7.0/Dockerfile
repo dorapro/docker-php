@@ -19,7 +19,7 @@ RUN apt-get update -q && apt-get install -yq --force-yes --no-install-recommends
         php-readline \
         php-xml \
         php-zip \
-        php-intl
+        php-intl \
     && apt-get autoremove -qq \
     && apt-get clean -qq \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* >/dev/null 2>&1
