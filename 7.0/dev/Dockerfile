@@ -1,23 +1,28 @@
 FROM dorapro/ubuntu:14.04
 
 RUN apt-get update -q && apt-get install -yq --force-yes --no-install-recommends software-properties-common curl \
-    && apt-add-repository ppa:ondrej/php-7.0 -y \
+    && apt-add-repository ppa:ondrej/php -y \
     && apt-get update \
     && apt-get install -yq --force-yes --no-install-recommends \
        build-essential \
        curl \
        php7.0-cli \
        php7.0-dev \
-       php7.0-readline \
-       php-curl \
-       php-gd \
-       php-imap \
-       php-intl \
-       php-memcached \
-       php-mysql \
-       php-pgsql \
        php-sqlite3 \
-       php-pear \
+       php-gd \
+       php-apcu \
+       php-json \
+       php-curl \
+       php-gmp \
+       php-imap \
+       php-mbstring \
+       php-mysql \
+       php-memcached \
+       php-readline \
+       php-xdebug \
+       php-xml \
+       php-zip \
+       php-intl
     && apt-get autoremove -qq \
     && apt-get clean -qq \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* >/dev/null 2>&1
