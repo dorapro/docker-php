@@ -54,6 +54,7 @@ RUN apt-get update -q && apt-add-repository ppa:git-core/ppa -y \
     && curl -sS https://github.com/phpmetrics/PhpMetrics/raw/master/build/phpmetrics.phar -o /usr/local/bin/phpmetrics \
     && chmod a+x /usr/local/bin/phpmetrics \
     && /usr/bin/npm install -gq gulp \
-    && /usr/bin/npm install -gq bower
+    && /usr/bin/npm install -gq bower \
+    && npm install -g eslint
 
 CMD ["php", "-a"]
