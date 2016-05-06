@@ -45,11 +45,11 @@ RUN apt-get update -q && apt-add-repository ppa:git-core/ppa -y \
     && composer global require hirak/prestissimo \
     && curl -sS http://get.sensiolabs.org/php-cs-fixer.phar -o /usr/local/bin/php-cs-fixer \
     && chmod a+x /usr/local/bin/php-cs-fixer \
-    && curl -sS https://github.com/squizlabs/PHP_CodeSniffer/releases/download/2.5.1/phpcs.phar -o /usr/local/bin/phpcs \
+    && curl -sSL https://github.com/squizlabs/PHP_CodeSniffer/releases/download/2.5.1/phpcs.phar -o /usr/local/bin/phpcs \
     && chmod a+x /usr/local/bin/phpcs \
     && curl -sSL https://github.com/squizlabs/PHP_CodeSniffer/releases/download/2.5.1/phpcbf.phar -o /usr/local/bin/phpcbf \
     && chmod a+x /usr/local/bin/phpcbf \
-    && curl -sSL http://static.phpmd.org/php/latest/phpmd.phar -o /usr/local/bin/phpmd \
+    && curl -sS http://static.phpmd.org/php/latest/phpmd.phar -o /usr/local/bin/phpmd \
     && chmod a+x /usr/local/bin/phpmd \
     && curl -sS https://github.com/phpmetrics/PhpMetrics/raw/master/build/phpmetrics.phar -o /usr/local/bin/phpmetrics \
     && chmod a+x /usr/local/bin/phpmetrics \
