@@ -41,7 +41,7 @@ RUN apt-get update -q && apt-add-repository ppa:git-core/ppa -y \
     && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
     && composer self-update 1.1.1 \
     && composer global require hirak/prestissimo \
-    && curl -sS http://get.sensiolabs.org/php-cs-fixer.phar -o /usr/local/bin/php-cs-fixer \
+    && curl -sS http://get.sensiolabs.org/php-cs-fixer-v1.11.phar -o /usr/local/bin/php-cs-fixer \
     && chmod a+x /usr/local/bin/php-cs-fixer \
     && curl -sSL https://github.com/squizlabs/PHP_CodeSniffer/releases/download/2.5.1/phpcs.phar -o /usr/local/bin/phpcs \
     && chmod a+x /usr/local/bin/phpcs \
